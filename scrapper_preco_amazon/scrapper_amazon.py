@@ -9,8 +9,7 @@ def envia_sms(preco):
     auth_token = 'AUTH TOKEN DA PLATAFORMA TWILIO'
     client = Client(account_sid, auth_token)
 
-    message = client.messages \
-            .create(
+    client.messages.create(
                  body= f'O preco do produto esta R$ {preco}',
                  from_='+NÚMERO DA PLATAFORMA TWILIO',
                  to='NÚMERO QUE VAI RECEBER O SMS'
